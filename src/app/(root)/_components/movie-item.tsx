@@ -13,11 +13,13 @@ export default function MovieItem({
 }: MovieItemType) {
   const [imageLoading, setImageLoading] = useState(true);
   const thumbnail = `https://image.tmdb.org/t/p/w500/${poster_path}`;
-  
+
   return (
     <div className="group relative aspect-[2/3] bg-background-card rounded-lg overflow-hidden cursor-pointer">
       {imageLoading && (
-        <SkeletonImage className="absolute inset-0 w-full h-full rounded-lg" />
+        <figure className="absolute inset-0 w-full h-full rounded-lg flex items-center justify-center">
+          <SkeletonImage className="w-full h-full" />
+        </figure>
       )}
       <Image
         src={thumbnail}
@@ -25,18 +27,18 @@ export default function MovieItem({
         width={366}
         height={518}
         className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 ${
-          imageLoading ? 'opacity-0' : 'opacity-100'
+          imageLoading ? "opacity-0" : "opacity-100"
         }`}
         onLoadingComplete={() => setImageLoading(false)}
       />
-      
+
       {/* 호버 시 나타나는 그라데이션 오버레이 */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      
+
       {/* 컨텐츠 정보 */}
       <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
         <h4 className="text-lg font-bold line-clamp-1 mb-2">{title}</h4>
-        
+
         <div className="flex justify-between items-center text-sm">
           <div className="flex items-center gap-2">
             <Image
