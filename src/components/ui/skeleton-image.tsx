@@ -4,7 +4,7 @@ export default function SkeletonImage({ className }: { className?: string }) {
   return (
     <div
       className={twMerge(
-        "flex items-center justify-center w-full h-48 bg-gray-300 rounded sm:w-96 animate-pulse",
+        "flex items-center justify-center w-full h-48 bg-gray-300 rounded-sm sm:w-96 animate-pulse",
         className
       )}
     >

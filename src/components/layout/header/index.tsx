@@ -3,11 +3,11 @@ import { IoNotificationsOutline } from "react-icons/io5";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 w-full bg-background/80 backdrop-blur-sm border-b border-foreground/10 z-50">
+    <header className="fixed top-0 w-full bg-background/80 backdrop-blur-xs border-b border-foreground/10 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-6">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold bg-linear-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
               NETFLEX
             </h1>
             <nav className="hidden md:flex space-x-8">

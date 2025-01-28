@@ -38,7 +38,7 @@ export default function HeroBackground() {
               priority={index === 0}
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-black/50" />
+            <div className="absolute inset-0 bg-linear-to-b from-black/90 to-black/50" />
           </div>
         </SwiperSlide>
       ))}
